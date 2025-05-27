@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+h1 {
+  margin: 20px;
+}
+
+#scoreboard {
+  margin: 10px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell.locked {
+  background-color: #ddd;
+  color: #666;
+  cursor: not-allowed;
+}
