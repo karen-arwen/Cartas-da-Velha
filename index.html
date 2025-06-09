@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Cartas da Velha</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas da Velha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Cartas da Velha</h1>
-  <div id="scoreboard">
-    <span>Jogador X: <span id="scoreX">0</span></span>
-    <span>Jogador O: <span id="scoreO">0</span></span>
-  </div>
-  <div id="board"></div>
-  <script src="game.js"></script>
+    <div id="game-wrapper">
+        <div class="player-area" id="player-x-area">
+            <h2>Cartas do Jogador X</h2>
+            <div id="player-hand-X" class="player-hand"></div>
+        </div>
+
+        <main id="game-center">
+            <div id="game-header">
+                <img src="images/fotojogo.jpg" alt="Logo Cartas da Velha" class="game-logo">
+                <h1>Cartas da Velha</h1>
+            </div>
+            <div id="scoreboard">
+                <div class="score-player" id="score-display-X">Jogador X: <span id="scoreX">0</span></div>
+                <div id="game-info"><div id="round-display">Rodada 1/5</div><div id="turn-timer">01:00</div></div>
+                <div class="score-player" id="score-display-O">Jogador O: <span id="scoreO">0</span></div>
+            </div>
+            <div id="turn-indicator">Vez do Jogador X</div>
+            <div id="main-board"></div>
+        </main>
+        
+        <div class="player-area" id="player-o-area">
+            <h2>Cartas do Jogador O</h2>
+            <div id="player-hand-O" class="player-hand"></div>
+        </div>
+    </div>
+    <div id="modal-overlay">
+        <div id="modal-content"><h2 id="modal-title"></h2><p id="modal-message"></p><button id="modal-button"></button></div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas da Velha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="game-wrapper">
+        <div class="player-area" id="player-x-area">
+            <h2>Cartas do Jogador X</h2>
+            <div id="player-hand-X" class="player-hand"></div>
+        </div>
+
+        <main id="game-center">
+            <div id="game-header">
+                <img src="images/fotojogo.jpg" alt="Logo Cartas da Velha" class="game-logo">
+                <h1>Cartas da Velha</h1>
+            </div>
+            <div id="scoreboard">
+                <div class="score-player" id="score-display-X">Jogador X: <span id="scoreX">0</span></div>
+                <div id="game-info"><div id="round-display">Rodada 1/5</div><div id="turn-timer">01:00</div></div>
+                <div class="score-player" id="score-display-O">Jogador O: <span id="scoreO">0</span></div>
+            </div>
+            <div id="turn-indicator">Vez do Jogador X</div>
+            <div id="main-board"></div>
+        </main>
+        
+        <div class="player-area" id="player-o-area">
+            <h2>Cartas do Jogador O</h2>
+            <div id="player-hand-O" class="player-hand"></div>
+        </div>
+    </div>
+    <div id="modal-overlay">
+        <div id="modal-content"><h2 id="modal-title"></h2><p id="modal-message"></p><button id="modal-button"></button></div>
+    </div>
+    
 </body>
 </html>
