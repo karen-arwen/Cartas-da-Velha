@@ -1,16 +1,16 @@
- document.addEventListener('DOMContentLoaded', () => {
+ document.addEventListener('DOMContentLoaded', () => { // -- Cria uma função falando para o jogo só rodar quando o DOM estiver completamente carregado
 
         // --- CONSTANTS & DOM ELEMENTS ---
         const BOARD_SIZE = 15, ROUND_DURATION = 60, MAX_ROUNDS = 5, BASE_SCORE_VALUE = 5;
-        const gameWrapper = document.getElementById('game-wrapper');
-        const mainBoard = document.getElementById('main-board');
-        const scoreXEl = document.getElementById('scoreX'), scoreOEl = document.getElementById('scoreO');
-        const turnIndicatorEl = document.getElementById('turn-indicator'), scoreDisplayX = document.getElementById('score-display-X');
-        const scoreDisplayO = document.getElementById('score-display-O'), turnTimerEl = document.getElementById('turn-timer');
-        const roundDisplayEl = document.getElementById('round-display');
-        const modalOverlay = document.getElementById('modal-overlay'), modalTitle = document.getElementById('modal-title');
-        const modalMessage = document.getElementById('modal-message');
-        let modalButton = document.getElementById('modal-button');
+        const gameWrapper = document.getElementById('game-wrapper'); // -- getElementById pega o elemento HTML com o ID 'game-wrapper'
+        const mainBoard = document.getElementById('main-board'); // -- getElementById pega o elemento HTML com o ID 'main-board'
+        const scoreXEl = document.getElementById('scoreX'), scoreOEl = document.getElementById('scoreO'); // -- getElementById pega os elementos HTML com os IDs 'scoreX' e 'scoreO'
+        const turnIndicatorEl = document.getElementById('turn-indicator'), scoreDisplayX = document.getElementById('score-display-X'); // -- getElementById pega o elemento HTML com o ID 'turn-indicator' e 'score-display-X'
+        const scoreDisplayO = document.getElementById('score-display-O'), turnTimerEl = document.getElementById('turn-timer'); // -- getElementById pega o elemento HTML com o ID 'score-display-O' e 'turn-timer'
+        const roundDisplayEl = document.getElementById('round-display'); // -- getElementById pega o elemento HTML com o ID 'round-display'
+        const modalOverlay = document.getElementById('modal-overlay'), modalTitle = document.getElementById('modal-title'); // -- getElementById pega o elemento HTML com o ID 'modal-overlay' e 'modal-title'
+        const modalMessage = document.getElementById('modal-message');// -- getElementById pega o elemento HTML com o ID 'modal-message'
+        let modalButton = document.getElementById('modal-button'); // -- getElementById pega o elemento HTML com o ID 'modal-button'
 
         // --- GAME STATE & CARDS OBJECT ---
         let state = {};
